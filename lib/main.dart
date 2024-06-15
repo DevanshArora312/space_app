@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:space_app/home.dart';
-
+import 'package:space_app/Screens/home.dart';
+import 'package:space_app/Screens/loading.dart';
 void main() {
-  runApp(const MaterialApp(
-    home:Home()
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes:{
+      '/' : (context) => const Loading(),
+      '/home' : (context) => const Home(),
+    }
   ));
 }
